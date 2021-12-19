@@ -3,6 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>About Me Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;800&family=Vujahday+Script&display=swap" rel="stylesheet">
+    <style>
+
+      .zoom {
+        padding: 1px;
+        transition: transform .2s; /* Animation */
+        width: 20px;
+        height: 20px;
+        margin: 0 auto;
+      }
+      .zoom:hover {
+        transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+      }
+    </style>
   </head>
   <body>
     <div id="navbar">
@@ -10,15 +27,32 @@
       <a href="about-me.html">About Me</a>
       <a href="my-portfolio.html">My Portfolio</a>
       <a href="contact.html">Contact</a>
-      <br>
-      My name is Sen and I'm from Russia. Some of my hobbies include making art and
+    </div>
+    <br>
+
+    <div class="text" id="narrow">
+      My name is Sen and I'm from Russia. Some of my hobbies include making pixel art and
       learning languages, including programming ones. I also write silly poems sometimes.
       In my free time, I enjoy reading fantasy books and playing video games.
       <br>
+      <br>
       There are a lot of things I want to be good at, for example composing music and
       playing video games on hard difficulty, but I guess nobody's perfect.
-
     </div>
+
+    <div class="zoom">
+      <img src="../images/sen-with-mug.jpg" width="480">
+    </div>
+
+    <div class="text" id="narrow">
+      This is my first semester in college and I'm studying Emerging Media Technology at City Tech.
+      I know some C# and I've made a few little projects in Unity game engine.
+      <br>
+      <br>
+      My dream job is to be a video game developer or a 3D animator. In 5 years, I see myself
+      with a completed bachelor's degree and hopefully working in some game studio.
+    </div>
+
     <script src="../navbar.v01.js"></script>
   </body>
 </html>

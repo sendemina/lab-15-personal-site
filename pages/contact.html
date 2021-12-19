@@ -2,7 +2,17 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>About Me Page</title>
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;800&family=Vujahday+Script&display=swap" rel="stylesheet">
+    <style>
+      #sketch
+      {
+        border:5px solid #888;
+      }
+    </style>
   </head>
   <body>
     <div id="navbar">
@@ -10,11 +20,50 @@
       <a href="about-me.html">About Me</a>
       <a href="my-portfolio.html">My Portfolio</a>
       <a href="contact.html">Contact</a>
-      <br>
-      email:
-      <br>
-      phone:
     </div>
+
+      <div class="text">
+        My e-mail: <strong>cool_dude@gmail.com</strong>
+        <br>
+        My phone number: <strong>1 222 3333 444</strong>
+      </div>
+
+    <canvas id="sketch" width="1600" height="360">
+    </canvas>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", main);
+
+      var sketch;
+      var context;
+      // var circle = {"x":0, "y":100, "r":30};
+
+      function main()
+      {
+        sketch = document.getElementById("sketch");
+        context = sketch.getContext("2d");
+        sketch.addEventListener("click", function(event)
+          {
+            draw_circle(event.x, event.y, 50);
+          });
+      }
+
+      function draw_circle(x, y, r)
+      {
+          context.beginPath();
+          context.arc(x - 20, y - 250, r, 0, 2 * Math.PI, true);
+          context.closePath();
+          context.fillStyle= "#DDDFD4";
+          context.fill();
+
+          context.beginPath();
+          context.arc(x - 20, y - 250, r - 10, 0, 2 * Math.PI, true);
+          context.closePath();
+          context.fillStyle= "#733A2D";
+          context.fill();
+      }
+    </script>
+
     <script src="../navbar.v01.js"></script>
   </body>
 </html>
